@@ -39,6 +39,7 @@ function BlogDetailPage() {
               title={blog.title}
               content={blog.content}
               topic={blog.topic}
+              image={blog.cover_photo_url}
             />
           </div>
         </div>

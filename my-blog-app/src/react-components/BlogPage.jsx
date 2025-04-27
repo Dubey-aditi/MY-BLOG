@@ -1,4 +1,4 @@
-function BlogPage({ id, title, content, topic }) {
+function BlogPage({ id, title, content, topic, image }) {
   return (
     <div className="blog-card">
       <section class="text-gray-600 body-font overflow-hidden">
@@ -9,7 +9,7 @@ function BlogPage({ id, title, content, topic }) {
                 alt="blog post"
                 // Fixed height and object cover
                 className="w-full h-80 object-cover object-center rounded"
-                src="https://dummyimage.com/400x400"
+                src={image}
               />
             </div>
             <div class="flex flex-col justify-start p-6 lg:w-2/3">

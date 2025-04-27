@@ -42,7 +42,7 @@ export default function Component() {
   };
   return (
     <div>
-      <nav className="flex justify-start space-x-10 px-10 text-xl py-6 shadow-md bg-[#6c3319]">
+      <nav className="flex justify-start space-x-10 px-10 text-xl py-6 shadow-md bg-[#a96f23]">
         <Link to="/">Home</Link>
         <Link to="/blogs">Blogs</Link>
         <Link to="/contact">Contact</Link>
