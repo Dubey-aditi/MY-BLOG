@@ -1,5 +1,6 @@
 from flask import Flask, request
 import psycopg2
+from flask_cors import CORS
 
 # Connect to your PostgreSQL
 conn = psycopg2.connect(
@@ -13,6 +14,7 @@ conn = psycopg2.connect(
 cursor = conn.cursor()
 
 app = Flask(__name__)
+CORS(app, origins=["http://localhost:5173"])  # Allow requests from React app
 
 
 @app.route("/home")
@@ -94,5 +96,22 @@ def post_blog():
 
 @app.post("/contact")
 def contact():
-    ## Receive contact messages
-    return "<p>Hello, World!</p>"
+    try:
+        data = request.json
+        print(data)
+        name = data.get("name")
+        email = data.get("email")
+        message = data.get("message")
+        cursor.execute(
+            "INSERT INTO contacts (name, email, message) VALUES (%s, %s, %s);",
+            (
+                name,
+                email,
+                message,
+            ),
+        )
+        conn.commit()
+        return {"success": "Message stored in db"}, 200
+    except Exception as e:
+        print(e)
+        return {"error": f"Mesaage failed to store in db: {e}"}, 400
