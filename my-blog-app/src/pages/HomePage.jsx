@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { Link } from 'react-router-dom';
+import background1 from "../assets/background1.png";
 import homegirlimg from "../assets/homegirlimg.png";
-import mainpagebg from "../assets/mainpagebg.png";
+import Navbar from "../react-components/Navbar";
 
 const HomePage = () => {
   useEffect(() => {
@@ -13,16 +13,11 @@ const HomePage = () => {
     
   return (
     <div className="h-screen flex flex-col overflow-clip">
-      <nav className="flex justify-start space-x-10 px-10 text-xl py-6 shadow-md bg-[#a96f23]">
-        <Link to="/">Home</Link>
-        <Link to="/blogs">Blogs</Link>
-        <Link to="/contact">Contact</Link>
-      </nav>
-
       <div
         className="bg-cover bg-center bg-no-repeat relative"
-        style={{ background: `url(${mainpagebg})`, backgroundSize: "cover" }}
+        style={{ background: `url(${background1})`, backgroundSize: "cover" }}
       >
+        <Navbar />
         <section className="flex flex-col md:flex-row items-center justify-center min-h-screen px-10 gap-10">
           <div className="flex justify-end w-1/2">
           <img

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import background4 from "../assets/background4.png";
 import BlogPage from "../react-components/BlogPage";
+import Navbar from "../react-components/Navbar";
 
 function BlogDetailPage() {
   const { id } = useParams();
@@ -26,24 +28,25 @@ function BlogDetailPage() {
   }
   return (
     <div>
-      <nav className="flex justify-start space-x-10 px-10 text-xl py-6 shadow-md bg-[#6c3319]">
-        <Link to="/">Home</Link>
-        <Link to="/blogs">Blogs</Link>
-        <Link to="/contact">Contact</Link>
-      </nav>
-      <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-wrap -m-4">
-            <BlogPage
-              key={blog.id}
-              title={blog.title}
-              content={blog.content}
-              topic={blog.topic}
-              image={blog.cover_photo_url}
-            />
+      <div
+        className="bg-cover bg-center bg-no-repeat relative"
+        style={{ background: `url(${background4})`, backgroundSize: "cover" }}
+      >
+        <Navbar />
+        <section class="text-gray-600 body-font">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap">
+              <BlogPage
+                key={blog.id}
+                title={blog.title}
+                content={blog.content}
+                topic={blog.topic}
+                image={blog.cover_photo_url}
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }
