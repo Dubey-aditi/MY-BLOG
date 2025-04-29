@@ -4,11 +4,11 @@ function BlogPage({ id, title, content, topic, image }) {
       <section class="text-gray-600 body-font overflow-hidden">
         <div class="container px-5 py-16 mx-auto">
           <div class="mx-auto flex flex-col lg:flex-row lg:items-stretch">
-            <div className="flex w-full lg:w-1/3">
+            <div className="flex w-full lg:w-1/2 justify-center">
               <img
                 alt="blog post"
                 // Fixed height and object cover
-                className="w-full object-cover object-center rounded"
+                className="w-1/2 object-cover object-center rounded"
                 src={image}
               />
             </div>
