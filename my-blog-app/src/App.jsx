@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './index.css'
+import AboutMePage from './pages/AboutMePage.jsx'
 import BlogDetailPage from './pages/BlogDetailPage'
 import BlogListPage from './pages/BlogListPage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
@@ -16,6 +17,7 @@ function App() {
           <Route path="/blogs" element={<BlogListPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/blogs/:id" element={<BlogDetailPage />} />
+          <Route path="/about" element={<AboutMePage />} />
         </Routes>
         {/* <AddPostPage /> */}
       </BrowserRouter>
