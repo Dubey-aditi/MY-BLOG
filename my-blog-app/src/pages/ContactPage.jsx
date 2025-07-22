@@ -53,7 +53,7 @@ export default function Component() {
             <div className="space-y-4 w-1/2 h-1/2">
               <h1 className="text-3xl font-bold">Contact Us</h1>
               <p className="text-gray-500 dark:text-gray-400">
-                Please fill in the form below to get in touch.
+                If you've liked it, you can leave a note for me here.
               </p>
             </div>
             <form onSubmit={handleSubmit} className="space-y-4">
