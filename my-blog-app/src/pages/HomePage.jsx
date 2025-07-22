@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import background1 from "../assets/background1.png";
 import homegirlimg from "../assets/homegirlimg.png";
 import Navbar from "../react-components/Navbar";
@@ -37,8 +37,7 @@ const HomePage = () => {
               <hr className="w-32 ml-16 my-4 border-t-2 border-gray-300" />
 
               <p className="mt-6 text-lg text-gray-700 max-w-md">
-                Welcome to my world of stories and ideas. I'm passionate about
-                tech, creativity, and expressing thoughts through blogs!
+                Hey there! Welcome to my fun corner of stories and ideas. I'm on a mission to try all sorts of things and jot them down here—so my friends (and future me) can laugh, learn, or just vibe along. Come join the ride through my blog adventures!
               </p>
             </div>
           </div>
